@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle Layout in Hebrew</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <button class="end_button restart_button" onClick="window.location.reload();" dir="rtl">התחל משחק חדש!</button>
+    
+    
+</head>
+<body>
+    <div class="warning" dir="rtl">דומני שהמילה אינה קיימת!</div>
+    <div class="success" dir="rtl">
+        <h4 dir="rtl" id="kys" style="text-wrap: nowrap">מנצח מנצח ארוחת כפרה!</h4>
+        <button class="end_button" id="show-answers">ראה את תשובות המשחק</button>
+        <button class="end_button" onClick="window.location.reload();">שחק שנית!</button>
+    </div>
+    <div class="player_body">
+        <div class="grid">
+            <!-- Create 6 rows for the guesses, each with 5 cells -->
+            <div class="row">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+            <div class="row">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+            <div class="row">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+            <div class="row">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+            <div class="row">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+            <div class="row">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+        </div>
+        <div class="keyboard">
+            <div class="keyboard-row">
+                <button class="key" data-key="ק">ק</button>
+                <button class="key" data-key="ר">ר</button>
+                <button class="key" data-key="א">א</button>
+                <button class="key" data-key="ט">ט</button>
+                <button class="key" data-key="ו">ו</button>
+                <button class="key" data-key="ן">ן</button>
+                <button class="key" data-key="ם">ם</button>
+                <button class="key" data-key="פ">פ</button>
+            </div>
+            <div class="keyboard-row">
+                <button class="key" data-key="ש">ש</button>
+                <button class="key" data-key="ד">ד</button>
+                <button class="key" data-key="ג">ג</button>
+                <button class="key" data-key="כ">כ</button>
+                <button class="key" data-key="ע">ע</button>
+                <button class="key" data-key="י">י</button>
+                <button class="key" data-key="ח">ח</button>
+                <button class="key" data-key="ל">ל</button>
+                <button class="key" data-key="ך">ך</button>
+            </div>
+            <div class="keyboard-row">
+                <button class="key" data-key="ז">ז</button>
+                <button class="key" data-key="ס">ס</button>
+                <button class="key" data-key="ב">ב</button>
+                <button class="key" data-key="ה">ה</button>
+                <button class="key" data-key="נ">נ</button>
+                <button class="key" data-key="מ">מ</button>
+                <button class="key" data-key="צ">צ</button>
+                <button class="key" data-key="ת">ת</button>
+                <button class="key" data-key="ץ">ץ</button>
+            </div>
+            <div class="keyboard-row">
+                <button class="key special" data-key="Enter">Enter</button>
+                <button class="key special" data-key="Backspace">Backspace</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="container bot_body">
+        <div class="grid">
+            <!-- Create 6 rows for the guesses, each with 5 cells -->
+            <div class="row">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+            <div class="row">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+            <div class="row">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+            <div class="row">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+            <div class="row">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+            <div class="row">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js" type="module"> </script>
+    <script src="js/words.js"type="module"></script>
+    <script src="js/wordle.js"type="module"></script>
+    <script src="js/contents.js"type="module"></script>
+    <script src="data/output.js" type="module"></script>
+</body>
+</html>
