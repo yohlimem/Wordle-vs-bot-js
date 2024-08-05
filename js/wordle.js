@@ -1,7 +1,7 @@
 import { words } from '../data/output.js';
 import { commonLetters } from './words.js';
-import {averageLetterPosition} from './words.js';
-import {bestWords} from './words.js';
+import { averageLetterPosition } from './words.js';
+import { bestWords } from './words.js';
 
 
 let i = 0;
@@ -47,14 +47,14 @@ function gameLoop(wordGuess, correct_word) {
 
     i += 1;
     return answer;
-    
+
 }
 
 function match(word, greenLetters, yellowLetters, wrongLetters) {
     // if the pattern is longer than the word, it can't be a match
-//    if (greenLetters.length > word.length) {
-//        throw new Error(`pattern is longer than word: ${greenLetters} ${word}`);
-//    }
+    //    if (greenLetters.length > word.length) {
+    //        throw new Error(`pattern is longer than word: ${greenLetters} ${word}`);
+    //    }
 
     // green letters must appear in the word in the correct place
     if (!greenLetters.every(([c, pos]) => word[pos] === c)) {
@@ -100,7 +100,7 @@ function listMatches(correctLetters, allWords, yellowLetters, wrongLetters, gues
         return _bestWords[Math.floor(Math.random() * _bestWords.length)];
     }
 
-    if (_bestWords.length <= 1){
+    if (_bestWords.length <= 1) {
         return _bestWords[0];
     }
 
@@ -146,16 +146,6 @@ function guesser() {
         // console.log(wordGuess);
         const guessResults = gameLoop(wordGuess);
 
-        // const guessResults = [];
-        // for (let l = 0; l < 5; l++) {
-        //     const guessResult = parseInt(prompt("enter result"));
-        //     guessResults.push(guessResult);
-        // }
-
-        if (i === 5) {
-            // console.log("guessed word: ", wordGuess);
-            // console.log(guessResults);
-        }
 
         const dictionary = words;
         if (guessResults.every(val => val === 1)) {
