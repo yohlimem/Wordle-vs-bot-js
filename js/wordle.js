@@ -92,6 +92,18 @@ function countAmountFromListToList(list1, list2) {
 function listMatches(correctLetters, allWords, yellowLetters, wrongLetters, guessResults, turn) {
 
     // console.log(guessResults);
+    const matches = allWords.filter(word => match(word, correctLetters, yellowLetters, wrongLetters));
+    // console.log(matches)
+    // console.log(bestWords(matches, averageLetterPosition));
+    const [_bestWords, bestScore] = bestWords(matches, averageLetterPosition);
+    if (turn == 0) {
+        return _bestWords[Math.floor(Math.random() * _bestWords.length)];
+    }
+
+    if (_bestWords.length <= 1){
+        return _bestWords[0];
+    }
+
     const common = (
         correctLetters.some(([letter]) => commonLetters.includes(letter)) &&
         countAmountFromListToList(commonLetters, correctLetters.map(([letter]) => letter)) >= 2
@@ -118,13 +130,7 @@ function listMatches(correctLetters, allWords, yellowLetters, wrongLetters, gues
         }
     }
 
-    const matches = allWords.filter(word => match(word, correctLetters, yellowLetters, wrongLetters));
-    // console.log(matches)
-    // console.log(bestWords(matches, averageLetterPosition));
-    const [_bestWords, bestScore] = bestWords(matches, averageLetterPosition);
-    if (turn == 0){
-        return _bestWords[Math.floor(Math.random() * _bestWords.length)];
-    }
+
     return _bestWords[0];
 }
 
